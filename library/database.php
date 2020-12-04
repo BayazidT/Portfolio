@@ -4,7 +4,7 @@ class Database{
     public $host = "localhost";
     public $user = "root";
     public $password ="";
-    public $dbName="CSE482L";
+    public $dbName="portfolio";
 
     public $link;
     public $error;
@@ -28,4 +28,14 @@ class Database{
             return false;
         }
     }
+    public function insert($q){
+        $insert_row = $this->link->query($q) or die ($this->link->error.__LINE__);
+        if($insert_row){
+            return $insert_row;
+            exit();
+        }else{
+            return false;
+        }
+    } 
+    
 }

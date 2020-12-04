@@ -45,6 +45,13 @@ Portfolio
     <div class="container">
     <div class="otherInfoForm">
         <h3 style="text-align: center;padding-top: 20px;">Register Your Account</h3>
+        <?php
+        if(isset($_GET['msg'])){
+          $msg = $_GET['msg'];
+          echo "<p style='color:red;text-align:center;'>".$msg."</p>";
+        }
+
+        ?>
         <hr>
         <div class="registerForm">
           <!--Register form starts-->

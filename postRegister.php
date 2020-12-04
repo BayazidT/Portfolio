@@ -1,4 +1,6 @@
 <?php
+   include "library/database.php";
+   $db = new Database();
  if(isset($_POST['register'])){
 
     $name=$_POST['name'];
@@ -10,19 +12,22 @@
     $skill=$_POST['skill'];
     $password=$_POST['password'];
     $repassword=$_POST['repassword'];
-    //Saving the variables to session
-    session_start();
-    $_SESSION['register']=true;
-    $_SESSION['name']= $name;
-    $_SESSION['username']= $username;
-    $_SESSION['contact']= $contact;
-    $_SESSION['email']= $email;
-    $_SESSION['college']= $college;
-    $_SESSION['gender']= $gender;
-    $_SESSION['skill']= $skill;
-    $_SESSION['password']= $password;
-    $_SESSION['repassword']= $repassword;
-    header("Location:detail.php");
+
+    if($password == $repassword){
+      $query ="INSERT INTO user(name, username, contact,email,college,gender,skill,password)Values ('$name', '$username', '$contact','$email','$college','$gender','$skill','$password')";
+      $qResult = $db->insert($query);
+      if($qResult){
+         header("Location:login.php?msg='Registration Successul'");
+      }
+
+
+    }else{
+       $msg = "Password and re password doesnot match"; 
+       header("Location:register.php?msg=$msg");
+    }
+
+  
+   
 
 
 

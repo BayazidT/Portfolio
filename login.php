@@ -51,6 +51,13 @@ Portfolio
     <div class="container">
     <div class="interestInfo">
         <h3 style="text-align: center;padding-top: 20px;">Login Here</h3>
+        <?php
+        if(isset($_GET['msg'])){
+          $msg = $_GET['msg'];
+          echo "<p style='color:green;text-align:center;'>".$msg."</p>";
+        }
+
+        ?>
         <hr>
         <div class="loginForm">
         <?php
