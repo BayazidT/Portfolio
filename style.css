@@ -1,0 +1,376 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffff;
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+.header {
+  background-color: #222222;
+  color: aliceblue;
+  margin-top: -20px;
+}
+.headerTitle {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.navbar {
+  margin-left: -40px;
+}
+img {
+  margin-top: 1px;
+}
+.navbar ul {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex: 100%;
+}
+.navbar ul li {
+  margin: 5px;
+  flex: 25%;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #444;
+  color: #f1f1f1;
+  border: 1px solid #222222;
+}
+.navbar ul li:hover {
+  flex: 25%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 0;
+  /*border: 1px solid rgb(96, 13, 173);*/
+  background-color: #777;
+  color: aliceblue;
+  transition: 0.7s;
+}
+.navbar ul li a {
+  display: block;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.navbar ul li a:hover {
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+}
+@media only screen and (max-width: 660px) {
+  .navbar {
+    display: none;
+  }
+}
+.menuBar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  color: rgb(47, 54, 54);
+  border: 1px solid #f1f1f1;
+  font-size: 14;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.menuBar:hover {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  color: rgb(87, 93, 99);
+  transition: 0.5s;
+}
+.navbarm {
+  margin-bottom: 5px;
+  margin-left: -40px;
+}
+.navbarm ul {
+  position: relative;
+  list-style: none;
+  display: block;
+  flex: 100%;
+  transition: 0.5s;
+}
+.navbarm ul li {
+  flex: 100%;
+  overflow: auto;
+  text-align: center;
+  padding: 5px;
+  background-color: #444;
+  color: #f1f1f1;
+  border: 1px solid #222222;
+  transition: 0.5s;
+}
+.navbarm ul li:hover {
+  flex: 100%;
+  text-align: center;
+  padding: 5px;
+  background-color: #777;
+  color: aliceblue;
+  transition: 0.5s;
+}
+.navbarm ul li a {
+  display: block;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.navbarm ul li a:hover {
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  transition: 0.5s;
+}
+@media only screen and (min-width: 660px) {
+  .navbarm {
+    display: none;
+  }
+}
+.mainSection {
+  position: relative;
+}
+.authInfo {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 100px;
+  font-size: 18px;
+  background: #444;
+  opacity: 0.7;
+}
+.authInfo h2,
+.education {
+  margin: 10px;
+  color: aliceblue;
+}
+.interestInfo,
+.otherInfoForm {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 5px;
+  min-height: 450px;
+}
+.educationalQualification {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+.educationalQualification td,
+.educationalQualification th {
+  border: 1px solid #ddd;
+
+  padding: 8px;
+}
+.educationalQualification tr:nth-child(2n) {
+  background-color: #fff;
+}
+.educationalQualification tr:hover {
+  background-color: #ddd;
+}
+.educationalQualification th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #444;
+  color: white;
+}
+@media only screen and (max-width: 568px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 30%;
+  }
+}
+
+.topBtn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+.container {
+  position: relative;
+  top: auto;
+  margin-top: -16px;
+  margin-bottom: -8px;
+  background-color: #f1f1f1;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.socialIcon {
+  margin-left: 40px;
+}
+.socialIcon a {
+  text-decoration: none;
+  color: cyan;
+}
+.footer {
+  background-color: #999;
+}
+.footerH {
+  text-align: center;
+  background-color: #444;
+  color: #fff;
+  height: 30px;
+  margin-bottom: -10px;
+  padding: 10px;
+}
+.contactForm {
+  width: 60%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 660px) {
+  .contactForm {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.loginForm {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px outset#444;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 660px) {
+  .loginForm,
+  .registerForm {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px outset#444;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 5px;
+  }
+}
+.registerForm {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px outset#444;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 660px) {
+  .registerForm {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px outset#444;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 5px;
+  }
+}
+/* This is for input*/
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin-left: 18px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+input[type="submit"] {
+  width: 30%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  font-size: 14px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+/*Input style ends */
