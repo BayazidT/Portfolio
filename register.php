@@ -55,14 +55,14 @@ Portfolio
         <hr>
         <div class="registerForm">
           <!--Register form starts-->
-          <form action="postRegister.php" method="POST">
-            <label for="username">Name</label>
-            <input type="text" id="username" name="name" placeholder="Name..">
+          <form name="RegisterForms" action="postRegister.php" method="POST" onsubmit="return formValidation();">
+            <label for="name">Name</label><label style="color:red;margin-left:10px;" id="nameError"></label>
+            <input type="text" id="name" name="name" placeholder="Name..">
             <!--/name input-->
-            <label for="username">Username</label>
+            <label for="username">Username</label><label style="color:red;margin-left:10px;" id="usernameError"></label>
             <input type="text" id="username" name="username" placeholder="Username..">
             <!--/Username input-->
-            <label>Contact no :       </label>
+            <label>Contact no :       </label> <label style="color:red;margin-left:10px;" id="contactError"></label>
             <input type="text" name="contact" placeholder="Contact no.."><br> 
             <!--/Contact no-->
             <label>Email :       </label>
@@ -75,12 +75,12 @@ Portfolio
               <option>Mega City College</option>
             </select>
              <!--/College info-->
-            <label>Gender :       </label><input type="radio" id="male" name="gender" value="male">
+            <label>Gender :       </label> <input type="radio" id="male" name="gender" value="male">
             Male</input>
             <input type="radio" id="female" name="gender" value="female">
             Female</input>
             <input type="radio" id="other" name="gender" value="other">
-            Other</input>
+            Other</input><label style="color:red;margin-left:10px;" id="genderError"></label>
              <!--/Gender info-->
              <br>
             <label>Skills : </label><input type="checkbox" id="Java" name="skill" value="Java">
@@ -92,11 +92,11 @@ Portfolio
            <input type="checkbox" id=".Net" name=".skill" value=".Net">
            .Net <br>
             <!--/Skill info-->
-            <label for="password">Password</label>
+            <label for="password">Password</label><label style="color:red;margin-left:10px;" id="passwordError"></label>
             <input type="password" id="password" name="password" placeholder="Password..">
              <!--/Password-->
-            <label for="password">Re-type Password</label>
-            <input type="password" id="password" name="repassword" placeholder="Password..">
+            <label for="password">Re-type Password</label><label style="color:red;margin-left:10px;" id="passwordError"></label>
+            <input type="password" id="repassword" name="repassword" placeholder="Password..">
             <!--/Retype password-->
             <!--Submit button-->
             <input type="submit" name="register" value="Register">
@@ -106,6 +106,7 @@ Portfolio
           <P>Already have an account ? <a href="login.php"> Login here</a></P>
         </div>
         <!--/registerForm-->
+       
     </div>
     <!--/otherInfoForm-->
 
@@ -137,3 +138,42 @@ Portfolio
     </div>
 </body>
 </html>
+<script type="text/javascript">
+    function formValidation() {
+      
+      var name = document.forms["RegisterForms"]["name"].value;
+      var username = document.forms["RegisterForms"]["username"].value;
+      var password = document.forms["RegisterForms"]["password"].value;
+      var gender = document.forms["RegisterForms"]["gender"].value;
+      var contact = document.forms["RegisterForms"]["contact"].value;
+      var flag = true;
+      var passwordLength = /^[a-zA-Z0-9!@$%]{8,32}$/;
+      var whiteSpace = /\s/;
+      var contactChk = /^[0-9]/;
+      if(name == ''){
+        document.getElementById('nameError').innerHTML="Name cannot be empty";
+        flag = false;
+      }
+      if(username == ''){
+        document.getElementById('usernameError').innerHTML="Username cannot be empty";
+        flag = false;
+      }
+      if(gender == ''){
+        document.getElementById('genderError').innerHTML="Gender need to be selected";
+        flag = false;
+      }
+      if(!contactChk.test(contact)) {
+          document.getElementById('contactError').innerHTML="Contact bo contains numbers only";
+          flag = false;
+        }
+      if(whiteSpace.test(username)) {
+          document.getElementById('usernameError').innerHTML="Username cannot contains white space";
+          flag = false;
+        }
+        if(!passwordLength.test(password)) {
+          document.getElementById('passwordError').innerHTML="Password length must be between 8-32";
+          flag = false;
+        }
+      return flag;
+    }
+  </script>

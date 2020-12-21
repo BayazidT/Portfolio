@@ -15,6 +15,9 @@
     $_SESSION['login'] = true;
     $_SESSION['userName'] = $userName;
      header("Location:profile.php");
+   }else{
+     $errMsg = "Username or password doesn't match!";
+     header("Location:login.php?errMsg=$errMsg");
    }
    
 
