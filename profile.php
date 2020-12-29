@@ -18,7 +18,7 @@ include "include/header.php";
 
     <div class="container">
     <div class="interestInfo">
-        <h3 style="text-align: center;padding-top: 20px;">User Profile</h3>
+        <h3 style="text-align: center;padding-top: 20px;">User Profile / <a href="dashboard.php">Dashboard</a></h3>
         <hr>
         <h2>Welcome to your profile</h2>
         <?php
